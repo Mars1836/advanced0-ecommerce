@@ -1,0 +1,45 @@
+{
+    "keep": {
+        "days": true,
+        "amount": 2
+    },
+    "auditLog": "logs\\.c6237bc68cb866658490cd3aa65a506209800d96-audit.json",
+    "files": [
+        {
+            "date": 1717849614175,
+            "name": "logs\\winston.log.2024-06-08-19",
+            "hash": "114e9909d78fb9c26003a0ecb0377640772c28271e2d98d03b9ac037cc485dcd"
+        },
+        {
+            "date": 1717851772423,
+            "name": "logs\\winston.log.2024-06-08-20",
+            "hash": "a50d2d02155788a8c10ab6fc3e6e58cebfacd844bc0e1ac2ad8a2d918b8e508f"
+        },
+        {
+            "date": 1717859169630,
+            "name": "logs\\winston.log.2024-06-08-22",
+            "hash": "e31853734f7ddca9f11cc7f5a0e9c47ab87d6ab50f6cfcdd3ff0ef5b3b091d71"
+        },
+        {
+            "date": 1717920258301,
+            "name": "logs\\winston.log.2024-06-09-15",
+            "hash": "88db8d8913e7c23661e660881cb092a2f3e2c0e739ebbba1fe109556464684e1"
+        },
+        {
+            "date": 1717926062785,
+            "name": "logs\\winston.log.2024-06-09-16",
+            "hash": "02737253a2cbc3dca58b9a5d0af8d04438743560c5ab5d3653675cfc4c25f678"
+        },
+        {
+            "date": 1717983510189,
+            "name": "logs\\winston.log.2024-06-10-08",
+            "hash": "6bbdb6455e7922c30b61bbf8fe2ee8c0fbdc5c2f425dd948c112c7aa082c75f9"
+        },
+        {
+            "date": 1718020848874,
+            "name": "logs\\winston.log.2024-06-10-19",
+            "hash": "bedb9bb23a8a11fe8c8d478fb0a3c6293a23f9fc2642d4cae742bb1956fddf49"
+        }
+    ],
+    "hashType": "sha256"
+}

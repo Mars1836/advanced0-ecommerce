@@ -1,0 +1,162 @@
+@import "../../styles/mixin";
+
+.chat_form{
+    width:110px;
+    height: 50px;
+    position: fixed;
+    bottom: 0px;
+    transition: 0.5s ease all;
+    right: 20px;
+    border: 1px solid var(--tp-grey-7);
+    border-radius: 5px;
+    background-color: var(--tp-common-white);
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    z-index: 100;
+    display: none;
+    @include min-width(lg) {
+        display: block;
+     }
+    .chat_form_header{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 50px;
+        border-bottom: 1px solid var(--tp-grey-7);
+        padding: 10px;
+        h3{
+            color: var(--tp-theme-4)
+        }
+        button{
+            cursor: pointer;
+            border: none;
+            background-color: transparent;
+        }
+    }
+    .chat_form_body{
+        display: flex;
+        flex : 1;
+        .chat_form_left_side{
+            flex-basis: 200px;
+            border-right:1px solid var(--tp-grey-7) ;
+            .user{
+                border-bottom: 1px solid var(--tp-grey-7);
+                padding: 5px;
+                display: flex;
+                align-items: center;
+                gap: 10px;
+                user-select: none;
+                cursor: pointer;
+                .user_image_wrapper{
+                    width: 40px;
+                    height: 40px;
+                    overflow: hidden;
+                    border-radius: 1000px;
+                    img{
+                        width: 100%;
+                        height: 100%
+                    }
+                }
+                .user_name_wrapper{
+                    .user_name{
+                        font-weight: 500;
+                    }
+                    
+                }
+                width: 100%;
+              
+             
+            }
+            .user.selected{
+                background-color: lightgray;
+            }
+            .user.selected:hover{
+                background-color: lightgray;
+            }
+            .user:hover{
+                background-color: rgb(237, 237, 237);
+               
+            }
+        }
+        .chat_form_right_side{
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            .form_chat_content{
+               
+                background-color:var(--tp-grey-1) ;
+                border-bottom: 1px solid var(--tp-grey-7);
+                display: flex;
+                flex-direction: column;
+                gap: 10px;
+                padding: 20px 20px;
+                height: 400px;
+                overflow-y: scroll;
+                .f{
+                    height: 100%;
+                    overflow: scroll;
+                }
+                .message_wrapper{
+                    .message_sub_wrapper{
+                        display: flex;
+                        gap: 5px;
+                    }
+                    .name{
+                        color: gray;
+                        font-weight: 300x;
+                        font-size: 13px;
+                        margin-bottom: 3px;
+                    }
+                    .avatar{
+                        width: 40px;
+                        height: 40px;
+                        border-radius: 1000px;
+                        overflow: hidden;
+                        background-color: red;
+                        margin-top: 10px;
+                        img{
+                            width: 100%;
+                            height: 100%;
+                        }
+                    }
+                    .message{
+                        padding: 10px;
+                        background-color: var(--tp-common-white);
+                        max-width: 240px;
+                        word-wrap: break-word;
+                        box-shadow: rgba(0, 0, 0, 0.2) 0px 3px 8px;
+                    }
+                }
+                
+                .message_wrapper.right{
+                    align-self: end;
+                    .message{
+                        background-color: var(--tp-grey-9);
+                    }
+                }
+            }
+            .form_chat_input{
+                flex: 1;
+                display: flex;
+                align-items: center;
+                padding: 0 5px 0 10px;
+                input{
+                    padding: 5px;
+                    height: 100%;
+                    width: 100%;
+                    border: none;
+                }
+                button{
+                    border: none;
+                    color: var(--tp-theme-4);
+                }
+            }
+        }
+
+    }
+}
+.chat_form.up{
+        width:700px;
+        height:500px;
+}

@@ -1,0 +1,33 @@
+@import '../../styles/_mixin';
+.swiper-board{
+    max-width: 100%;
+    margin-left: auto;
+     margin-right: auto;
+  cursor: pointer;
+}
+
+.item{
+    height: 700px;
+    @include min-width(sm) {
+        background-color: lightblue;
+        height: 300px
+    }
+    @include min-width(md) {
+        background-color: lightblue;
+        height: 400px
+    }
+    @include min-width(lg) {
+        background-color: lightblue;
+        height: 500px
+    }
+    @include min-width(xl) {
+        background-color: lightblue;
+        height: 600px
+    }
+    img{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border: none;
+    }
+}

@@ -1,0 +1,34 @@
+.swiper-board-wrapper{
+    .slick-arrow{
+    z-index: 1;
+    } 
+    .slick-prev{
+        transform: translateX(100%);
+    }
+    .slick-next{
+        transform: translateX(-100%);
+    }
+    .slick-prev,.slick-next{
+        background-color: var(--tp-heading-secondary);
+        width : 50px;
+        height: 50px;
+        border-radius: 100px;
+        transition: 0.2s ease all;
+    }
+    .slick-prev:hover,.slick-next:hover{
+        background-color: var(--tp-heading-secondary);
+    }
+    .slick-prev::before,.slick-next::before{
+        // font-size: 40px;
+        text-align: center;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        color: var(--tp-common-white);
+        align-items: center;
+    }
+    .slick-prev:hover,.slick-next:hover{
+        opacity: 0.75;
+    }
+}

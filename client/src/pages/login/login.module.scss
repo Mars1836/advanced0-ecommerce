@@ -1,0 +1,31 @@
+.form{
+    background-color: var(--tp-grey-3);
+    padding : 30px;
+    width: 100%;
+    .input_wrapper{
+        display: block;
+        width: 100%;
+        margin-bottom: 15px;
+        overflow: hidden;
+        input{
+            padding: 25px 0 25px 20px;
+            display: block;
+            width: 100%;          
+        }
+    }
+    .submit{
+        background-color: var(--tp-heading-secondary);
+        display: block;
+        width: 100%;
+        padding: 20px;
+        color: var(--tp-common-white);
+        font-family: var(--tp-ff-heading);
+        font-size: 16px;
+        cursor: pointer;
+    }
+    .boundary{
+        outline: none;
+        border: none;
+        border-radius: 10px;
+    }
+}

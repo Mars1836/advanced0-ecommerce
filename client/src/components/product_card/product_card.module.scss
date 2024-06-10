@@ -1,0 +1,71 @@
+@import "../../styles/mixin";
+.card-wrapper{
+    max-width: 300px;
+    width:100%;
+}
+.card{
+    border-radius:10px;
+    user-select: none;
+    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;  
+    img {
+        width: 100%;
+        aspect-ratio: 1 / 1; 
+        object-fit: cover;    
+    }
+    cursor: pointer;
+    z-index: 0;
+    .card-body{
+        background-color: #F7F7F9;
+        padding: 14px;
+    }
+    .card-category{
+        display: flex;
+        gap: 5px;
+        a{
+            color:#8f7a74;
+            font-size: 14px;
+            font-weight: 500;
+            display:inline-block;
+            text-transform: capitalize;
+            
+        }
+        a:hover{
+            text-decoration-line: underline;
+        }
+    }
+    .card-title{
+        color: #882A6E;
+        font-size: 17px;
+        font-weight: 500;
+        margin:8px 0;
+        display: block;
+    }
+    .card-price{
+        color: #EC305D;
+        font-size: 18px;
+        font-weight: 600;
+        margin: 8px 0 20px;
+    }
+    .cart-btn-wrapper{
+    width: 100%;
+      display: flex;
+      justify-content: center;
+      visibility: hidden;
+      height: 0;
+      transition: 0.2s all ease;
+      opacity: 0;
+    }
+    .cart-btn{
+        padding: 1px 60px;
+        background-color: var(--tp-heading-secondary);
+        display: block;
+        text-align: center;
+        line-height: 35px;
+        text-transform: uppercase;
+        color: var(--tp-common-white);
+        font-weight: 600;
+        border-radius: 50px;
+        font-size: 13px;
+        border: none;
+    }
+}

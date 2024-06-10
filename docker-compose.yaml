@@ -1,0 +1,47 @@
+version: "3.8"
+services:
+  mongo:
+    image: mongo
+    container_name: mongodb
+    volumes:
+      - mongo_data:/data/db
+    ports:
+      - "27017:27017"
+    restart: unless-stopped
+  redis:
+    image: redis
+    container_name: redisdb
+    volumes:
+      - redis-data:/data
+    ports:
+      - "6379:6379"
+    restart: unless-stopped
+    command: redis-server --save
+  backend_api:
+    build: "./backendAPI"
+    container_name: shopdev_api
+    ports:
+      - "4000:4000"
+    volumes:
+      - "./backendAPI:/app"
+      - "/app/node_modules"
+    depends_on:
+      - redis
+      - mongo
+    environment:
+      - NODE_ENV
+      - TOKEN_DISCORD
+      - CHANNEL_ID_DISCORD
+      - CLOUDINARY_NAME
+      - CLOUDINARY_KEY
+      - CLOUDINARY_SERCET
+      - AWS_BUCKET_NAME
+      - AWS_BUCKET_KEY
+      - AWS_BUCKET_SERCET_KEY
+      - PORT
+    restart: unless-stopped
+volumes:
+  mongo_data:
+  redis-data:
+
+
